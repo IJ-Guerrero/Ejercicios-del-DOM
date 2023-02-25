@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" data-dark>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Practice</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css"
+    />
+    <link rel="stylesheet" href="DOM-ejecicio.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body data-dark>
+    <header class="header">
+      <h1>Ejercicios del DOM</h1>
+    </header>
+
+    <button class="panel-btn hamburger hamburger--vortex" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+
+    <aside class="panel">
+      <nav class="menu">
+        <a href="#seccion0">Encriptadora - Desencriptadora</a>
+        <a href="#seccion1">Reloj Digital y Alarma Sonora</a>
+        <a href="#seccion2">Eventos del teclado</a>
+        <a href="#seccion3">Responsive web</a>
+        <a href="#seccion4">Sorteo digital</a>
+        <a href="#seccion5">API Fetch + Async-Await</a>
+        <a href="#seccion6">Axios</a>
+        <a href="#seccion7">Axios + Async-Await</a>
+      </nav>
+    </aside>
+    <main>
+      <section id="seccion0" class="section">
+        <h2>Encriptadora - Desencriptadora</h2>
+
+        <!-- <form>
+          <label for="input">Enter a value:</label>
+          <input type="number" id="input" name="input" />
+          <button type="button" onclick="calculate()">Submit</button>
+        </form>
+        <p id="output"></p> -->
+
+        <form>
+          <div class="form-group">
+            <label for="texto">Ingresa el texto a codificar</label>
+            <input type="text" class="form-control" id="texto" name="texto" />
+          </div>
+          <div class="form-group">
+            <label for="clave">ingresa clave secreta</label>
+            <input type="text" class="form-control" id="clave" name="clave" />
+          </div>
+          <button id="encriptar-btn" class="btn btn-primary" type="button">
+            Codificar
+          </button>
+        </form>
+        <p id="encriptado"></p>
+
+        <form>
+          <div class="form-group">
+            <label for="codigo">Ingresa el codigo a descodificar</label>
+            <input type="text" class="form-control" id="codigo" name="codigo" />
+          </div>
+          <div class="form-group">
+            <label for="llave">Ingresa llave</label>
+            <input type="text" class="form-control" id="llave" name="llave" />
+          </div>
+          <button id="desencriptar-btn" class="btn btn-primary" type="button">
+            Descodificar
+          </button>
+        </form>
+        <p id="desencriptado"></p>
+      </section>
+      <section id="seccion1" class="section">
+        <h2>Reloj Digital y Alarma Sonora</h2>
+        <div id="reloj"></div>
+        <div>
+          <button id="activar-reloj">Iniciar Reloj</button>
+          <button id="desactivar-reloj">Detener Reloj</button>
+          <button id="activar-alarma">Iniciar Alarma</button>
+          <button id="desactivar-alarma">Detener Alarma</button>
+        </div>
+      </section>
+      <section id="seccion2" class="section">
+        <h2>Eventos del teclado</h2>
+        <article class="stage">
+          <div class="ball"></div>
+        </article>
+      </section>
+      <section id="seccion3" class="section" data-scroll-spy>
+        <h2>Responsive behavior</h2>
+        <div id="youtube"></div>
+        <div id="gmaps"></div>
+      </section>
+      <section id="seccion4" class="section">
+        <h2>Sorteo digital</h2>
+        <ul class="players">
+          <li class="player">Java</li>
+          <li class="player">Javascript</li>
+          <li class="player">Python</li>
+          <li class="player">C</li>
+          <li class="player">C++</li>
+          <li class="player">C#</li>
+          <li class="player">Ruby</li>
+          <li class="player">Basic</li>
+          <li class="player">Go</li>
+          <li class="player">Asemmbly</li>
+        </ul>
+        <button id="winner-btn">Obtener ganador</button>
+        <div id="user-device"></div>
+      </section>
+      <section id="seccion5" class="section">
+        <h2>API Fetch + Async-Await</h2>
+        <ol id="fetch-async"></ol>
+      </section>
+      <section id="seccion6" class="section">
+        <h2>Axios</h2>
+        <ol id="axios"></ol>
+      </section>
+      <section id="seccion7" class="section">
+        <h2>Axios + Async-Await</h2>
+        <ol id="axios-async"></ol>
+      </section>
+
+      <section id="seccion8" class="section">
+        <h2>ASCII</h2>
+        <div id="asciiConvertidor"></div>
+
+        <form>
+          <div class="form-group">
+            <label for="numero">Ingresa el numero</label>
+            <input
+              type="number"
+              class="form-control"
+              id="numero"
+              name="numero"
+            />
+          </div>
+          <div class="form-group">
+            <label for="caracter">Ingresa el caracter</label>
+            <input
+              type="text"
+              class="form-control"
+              id="caracter"
+              name="caracter"
+            />
+          </div>
+          <button id="ascii-btn" class="btn btn-primary" type="button">
+            Convertir
+          </button>
+        </form>
+        <p id="asciiNumeroValueChar"></p>
+        <p id="asciiCharValueNumero"></p>
+      </section>
+    </main>
+    <button class="scroll-top-btn hidden">&#11014;</button>
+    <button class="dark-theme-btn">🌙</button>
+
+    <!-- <script>
+      function calculate() {
+        // Get the value of the input field
+        var input = document.getElementById("input").value;
+        console.log(document.getElementById("input"));
+        // Calculate the value of the variable
+        var variable = input * 2;
+        // Display the result in the output element
+        document.getElementById("output").innerHTML =
+          "The value of the variable is " + variable;
+      }
+    </script> -->
+    <!-- <script>
+
+      class Educacion {    
+        constructor(nombreE, descripcionE, periodoE, tituloE){
+        this.nombreE = nombreE;
+        this.descripcionE = descripcionE;
+        this.periodoE = periodoE;
+        this.tituloE= tituloE;
+    }
+}
+      function onCreate() {
+
+    const educ = new Educacion(this.nombreE, this.descripcionE, this.periodoE, this.tituloE);
+    this.sEducacion.save(educ).subscribe(
+      data => {
+        alert("Estudio añadido. Hacer click en aceptar para ver los cambios");
+        this.router.navigate(['']);
+
+        // INICIO 20230210
+        this.nombreE = "";
+        this.descripcionE = "";
+        this.periodoE = "";
+        this.tituloE = "";
+        this.cargarEducacion();
+        // FIN 20230210
+
+      }, err => {
+        alert("Falló");
+        this.router.navigate(['']);
+      }
+    )
+  }
+    </script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="java_script_del_dom/ejercicios.js" type="module"></script>
+    <script src="java_script_del_dom/ajax_prueba.js"></script>
+  </body>
+</html>
